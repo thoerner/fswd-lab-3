@@ -10,6 +10,7 @@ window.$ = $;
 $('body').show();
 
 $(function() {
+
   $('button#add').click(function(e) {
     // Make sure the form does not get submitted
     e.preventDefault();
@@ -20,9 +21,18 @@ $(function() {
     // create a completely new (unattached)
     // list item element (<li>)
     var newListElement = $('<li></li>');
+    var newListElementButton = $('<button>x</button>');
+    newListElementButton.click(function(e) {
+      e.preventDefault();
+
+      newListElement.fadeOut(1000, function() {
+        newListElementButton.remove();
+      });
+    });
 
     // Set its text
     newListElement.text(newTodo);
+    newListElement.append(newListElementButton);
 
     // And add it to the end of the list
     $('ul').append(newListElement);
@@ -30,4 +40,6 @@ $(function() {
     // Then clear out the input element
     $('input[name=todo]').val("");
   });
+
+
 });
