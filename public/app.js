@@ -37,6 +37,6 @@ $('body').show();
 //     $('ul').append(newListElement);
 //
 //     // Then clear out the input element
-//     $('input[name=todo]').val("");
+//     $('input[name=todo]').val('');
 //   });
 // });

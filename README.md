@@ -12,13 +12,13 @@
 * Open your browser's javascript console (In Chrome, it's under View > Developer > JavaScript Console)
 * Enter the following and see what happens:
 
-      $("h1").text("Hiya, world!");
+      $('h1').text('Hiya, world!');
 
 * In the console, run this javascript:
 
-      $("p code").css("background-color", "blue");
+      $('p code').css('background-color', 'blue');
 * Reload the page and watch your hard work… disappear.
 
 ## Exercise!
 
-With your newfangled knowledge of jQuery, update the function that handles the "Add Todo" button click to add a button, labeled "X" to the list item that is created. This button, when clicked, will removed that one list item from the list (and nothing more).
+With your newfangled knowledge of jQuery, update the function that handles the 'Add Todo' button click to add a button, labeled 'X' to the list item that is created. This button, when clicked, will removed that one list item from the list (and nothing more).

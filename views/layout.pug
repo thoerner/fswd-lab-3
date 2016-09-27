@@ -1,16 +1,32 @@
 doctype html
 html
-  head
-    script(src="/jspm_packages/system.js")
-    script(src="/config.js")
-    script
-      | System.import('app');
-    title Hello world!
-  body(style="display: none")
-    div.container
-      .page-header
-        block header
-          p Header
-      if flash_message
-        p= flash_message
-      block body
+    head
+        script(src='/jspm_packages/system.js')
+        script(src='/config.js')
+        script
+            | System.import('app');
+        title Hello world!
+    body(style='display: none')
+        div.container
+            .page-header
+                block header
+                    // h2 Tim's FSWD Site
+                    br
+                    p(align='right')
+                        a(href='/') Home
+                        | &nbsp;|&nbsp;
+                        a(href='/tasks') Tasks
+                        | &nbsp;|&nbsp;
+                        if user_id
+                            a(href='/users/logout') Logout
+                            | &nbsp;
+                        else
+                            a(href='/users/login') Login
+                            | &nbsp;|&nbsp;
+                            a(href='/users/register') Register
+                            | &nbsp;
+            if flash_message
+                p
+                    font(color='red')
+                        = flash_message
+            block body
